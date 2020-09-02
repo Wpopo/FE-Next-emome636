@@ -1,0 +1,23 @@
+{
+  "nextJS": {
+    "host": "alpha-next.636.com.tw",
+    "ezdingAPIAddress": "http://alpha-api2-local.ezding.com.tw",
+    "memberAPIAddress": "http://alpha-api-member-local.fullerton.com.tw"
+  },
+  "beta": {
+    "host": "beta.636.com.tw",
+    "hostTest": "beta3.ezding.com.tw",
+    "ezdingAPIAddress": "http://beta-api2-local.ezding.com.tw",
+    "memberAPIAddress": "http://beta-api-member-local.fullerton.com.tw"
+  },
+  "prod": {
+    "hostNext": "next.ezding.com.tw",
+    "hostNext2": "next2.ezding.com.tw",
+    "hostP1": "p1.ezding.com.tw",
+    "hostP2": "p2.ezding.com.tw",
+    "hostP3": "p3.ezding.com.tw",
+    "hostP4": "p4.ezding.com.tw",
+    "ezdingAPIAddress": "http://api2-local.ezding.com.tw",
+    "memberAPIAddress": "http://member-local.fullerton.com.tw"
+  }
+}

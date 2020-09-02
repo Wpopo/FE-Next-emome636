@@ -1,0 +1,4 @@
+node_modules/*
+.next/*
+static/.well-known/*
+/package-lock.json

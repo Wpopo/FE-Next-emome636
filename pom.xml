@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.fullerton.web</groupId>
+	<artifactId>movie-frontend</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+		<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.10.0</version>
+				<executions>
+					<execution>
+						<id>install node and yarn</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+							<goal>install-node-and-yarn</goal>
+						</goals>
+						<phase>generate-sources</phase>
+						<configuration>
+							<nodeVersion>v10.16.2</nodeVersion>
+							<npmVersion>6.14.5</npmVersion>
+							<yarnVersion>v1.22.4</yarnVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>yarn install</id>
+						<goals>
+							<goal>yarn</goal>
+						</goals>
+						<phase>generate-sources</phase>
+						<configuration>
+							<installDirectory>${project.basedir}</installDirectory>
+							<workingDirectory>${project.basedir}</workingDirectory>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>yarn build</id>
+						<goals>
+							<goal>yarn</goal>
+						</goals>
+						<phase>generate-sources</phase>
+						<configuration>
+							<installDirectory>${project.basedir}</installDirectory>
+							<workingDirectory>${project.basedir}</workingDirectory>
+							<arguments>run build</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${basedir}/assembly.xml</descriptor>
+					</descriptors>
+					<tarLongFileMode>posix</tarLongFileMode>
+					<finalName>movie-frontend</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
